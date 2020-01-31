@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="description" content="">
+<meta name="keywords"    content="">
+<title>calming</title>
+<link rel="shortcut icon" href="http://josephandstacey.com/web/upload/favicon_20170421220617.ico">
+<link rel="stylesheet" type="text/css" href="./common/css/common.css">
+</head>
+<body>
+	<div class="wrap">
+		<div class="slide">
+			<ul class="">
+				<li class="img20 video">
+					<video loop muted autoplay>
+						<source src="./images/calming_pc.mp4" type="video/mp4">
+					</video>
+				</li>
+				<li class="img21">
+					<a href="https://www.josephandstacey.com/product/detail.html?product_no=888&cate_no=292&display_group=1" class="t1"><img src="./images/img_text21_1.png" alt=""/></a>
+					<a href="https://www.josephandstacey.com/product/detail.html?product_no=1463&cate_no=292&display_group=1" class="t2"><img src="./images/img_text21_2.png" alt=""/></a>
+				</li>
+				<li class="img22">
+					<div class="img22_01"></div>
+					<a href="https://www.josephandstacey.com/product/detail.html?product_no=1633&cate_no=292&display_group=1" class="t1"><img src="./images/img_text22_1.png" alt=""/></a>
+					<a href="https://www.josephandstacey.com/product/detail.html?product_no=1474&cate_no=292&display_group=1" class="t2"><img src="./images/img_text22_2.png" alt=""/></a>
+				</li>
+				<li class="img23">
+					<div class="img23_01"></div>
+					<a href="https://www.josephandstacey.com/product/detail.html?product_no=1245&cate_no=292&display_group=1" class="t1"><img src="./images/img_text23_1.png" alt=""/></a>
+					<a href="https://www.josephandstacey.com/product/detail.html?product_no=1606&cate_no=292&display_group=1" class="t2"><img src="./images/img_text23_2.png" alt=""/></a>
+				</li>
+				<li class="img24">
+					<div class="img24_01"></div>
+				</li>
+				<li class="img25">
+					<div class="img25_01"></div>
+					<a href="https://www.josephandstacey.com/product/detail.html?product_no=1457&cate_no=292&display_group=1" class="t1"><img src="./images/img_text25_1.png" alt=""/></a>
+					<a href="https://www.josephandstacey.com/product/detail.html?product_no=1464&cate_no=292&display_group=1" class="t2"><img src="./images/img_text25_2.png" alt=""/></a>
+				</li>
+				<li class="img26">
+					<a href="https://www.josephandstacey.com/product/detail.html?product_no=1617&cate_no=292&display_group=1" class="t1"><img src="./images/img_text26_1.png" alt=""/></a>
+					<a href="https://www.josephandstacey.com/product/detail.html?product_no=1476&cate_no=292&display_group=1" class="t2"><img src="./images/img_text26_2.png" alt=""/></a>
+				</li>
+				<li class="img27">
+					<div class="img27_01"></div>
+				</li>
+			</ul>
+			<button type="button" class="left"><img src="./images/btn_left03.png" alt=""/></button>
+			<button type="button" class="right"><img src="./images/btn_right03.png" alt=""/></button>
+			<a href="https://josephandstacey.com/lookbook_myluckycolor.html" class="close"><img src="./images/btn_close.png" alt=""/></button>
+		</div>
+	</div>
+
+
+<script src="./common/js/jquery.js"></script>
+<script src="./common/js/slick.min.js"></script>
+<script>
+;(function($){
+$(function() {
+	$('.slide ul').slick({
+			slidesToShow: 1,
+			dots: false,
+			centerMode: true,
+			prevArrow: '.slide .left',
+			nextArrow: '.slide .right'
+	});
+	$('.slide ul').on('afterChange', function(event, slick, direction){
+		if ($('.slick-current').hasClass('video')) {
+			$('.video video')[0].play();
+		} else {
+			$('.video video')[0].pause();
+			$('.video video')[0].currentTime = 0;
+		}
+	});
+	var aniCHeck = true;
+	var changeRoll;
+
+	$('html, body').on('mousewheel DOMMouseScroll', function(e) {
+		var E = e.originalEvent,
+				delta;
+		if (E.detail) {
+			delta = E.detail * -40;
+		} else{
+			delta = E.wheelDelta;
+		} 
+
+		if ((Math.abs(delta) > 100) && aniCHeck) {			
+			if (delta < 0) {//아래
+				aniCHeck = false;
+				recount(); 
+				$('.slide ul').slick("slickNext");
+			} else {//위
+				aniCHeck = false;
+				recount();
+				$('.slide ul').slick("slickPrev");
+			}
+		}
+	});
+
+	function recount(i) {
+		clearTimeout(changeRoll);
+		changeRoll = setTimeout(function () {
+			aniCHeck = true;
+		}, 500);
+	}
+});
+})(window.jQuery);
+</script>
+</body>
+</html>
