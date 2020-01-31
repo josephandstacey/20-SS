@@ -55,7 +55,7 @@ body {font-family: 'Noto Sans KR'; height:100%;}
 .wrap .slide ul li {position:relative;}
 .wrap .slide ul li a img {width:100%;}
 
-.wrap .slide a {padding:20px;transform:translate3d(20px, -20px, 0) scale(1); -webkit-transform:translate3d(20px, -20px, 0) scale(1); -ms-transform:translate3d(20px, -20px, 0) scale(1);}
+.wrap .slide a {padding:20px;transform:translate3d(20px, -20px, 0) scale(1); -webkit-transform:translate3d(20px, -20px, 0) scale(1); -ms-transform:translate3d(20px, -20px, 0) scale(1); z-index:10;}
 
 .wrap .slide .left {position:fixed; left:0; top:0%; margin-top:0px; z-index:10; width:90px; height:100%; text-align:left; opacity:0; transition:all .3s; -webkit-transition:all .3s; -ms-transition:all .3s;}
 .wrap .slide .left:hover {opacity:1;}
@@ -190,7 +190,7 @@ body {font-family: 'Noto Sans KR'; height:100%;}
 .m_wrap .slide ul div {padding:0 !important; position:absolute; width:100vw; height:100vh !important;}
 .m_wrap .slide ul li {position:relative;}
 .m_wrap .slide ul li a img {width:100%;}
-.m_wrap .slide a {padding:20px;transform:translate3d(-20px, -20px, 0) scale(1); -webkit-transform:translate3d(-20px, -20px, 0) scale(1); -ms-transform:translate3d(-20px, -20px, 0) scale(1);}
+.m_wrap .slide a {padding:20px;transform:translate3d(-20px, -20px, 0) scale(1); -webkit-transform:translate3d(-20px, -20px, 0) scale(1); -ms-transform:translate3d(-20px, -20px, 0) scale(1); z-index:10;}
 
 
 .m_wrap .slide .img01 {width:auto; height:100vh; background:url('../../images/energetic_gif.gif') center center no-repeat; background-size: auto 100%;}
