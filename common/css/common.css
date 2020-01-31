@@ -319,7 +319,7 @@ body {font-family: 'Noto Sans KR'; height:100%;}
 
 .m_wrap .slide .video {position:relative; background:none;}
 .m_wrap .slide .video video {position:absolute; width:100vw; height:100vh;}
-.m_wrap .icon_sc {position:fixed; bottom:50px; left:0; width:100%; text-align:center; z-index:10; animation: mousePop 2.5s linear 1 forwards ; -webkit-animation: mousePop 2.5s linear 1 forwards ; opacity:1;}
+.m_wrap .icon_sc {position:fixed; bottom:50px; left:0; width:100%; text-align:center; z-index:5; animation: mousePop 2.5s linear 1 forwards ; -webkit-animation: mousePop 2.5s linear 1 forwards ; opacity:1;}
 
 @-webkit-keyframes mousePop {
     33% {
